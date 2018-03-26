@@ -1,4 +1,4 @@
-import objects.MovableChecker;
+package objects;
 
 public class ObjectMovementPair {
     private MovableChecker object;
@@ -12,4 +12,6 @@ public class ObjectMovementPair {
         this.object=object;
         this.movement=movement;
     }
+
+    public
 }

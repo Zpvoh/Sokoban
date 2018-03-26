@@ -7,7 +7,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Map map=new Map("maps/2.map");
+        System.out.println("Choose the map:");
+        Scanner scanner=new Scanner(System.in);
+        String index=scanner.next();
+        Map map=new Map("maps/"+index+".map");
         try {
             play(map);
         } catch (DirectionException e) {

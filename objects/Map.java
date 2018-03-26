@@ -12,9 +12,9 @@ import java.util.Scanner;
 
 public class Map {
     int[][] map;
-    public ArrayList<Box> boxes=new ArrayList<Box>();
-    public ArrayList<Wall> walls=new ArrayList<Wall>();
-    public ArrayList<Target> targets=new ArrayList<Target>();
+    public ArrayList<Box> boxes=new ArrayList<>();
+    public ArrayList<Wall> walls=new ArrayList<>();
+    public ArrayList<Target> targets=new ArrayList<>();
     public People people=new People(0, 0);
     public Map(){
 
@@ -167,5 +167,10 @@ public class Map {
         }
 
         return false;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
