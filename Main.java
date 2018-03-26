@@ -7,17 +7,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Map map=new Map("maps/2.map");
+        System.out.println("Choose the map:");
         try {
-            play(map);
+            play();
         } catch (DirectionException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public static void play(Map map) throws DirectionException {
-        String command="a";
+    public static void play() throws DirectionException {
         Scanner scanner=new Scanner(System.in);
+        String index=scanner.nextLine();
+        Map map=new Map("maps/"+index+".map");
+        Map originalMap=new Map("maps/"+index+".map");
+        String command="a";
         while(!command.equals("q")){
             map.printMap();
             if(map.isWin()){
@@ -41,6 +44,10 @@ public class Main {
                     break;
                 case "d":
                     playerMove(map, People.D);
+                    break;
+                case "r":
+                    map=originalMap;
+                    originalMap=new Map("maps/"+index+".map");
                     break;
                 case "q":
                     System.out.println("Good bye!");

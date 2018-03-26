@@ -155,14 +155,16 @@ public class Map {
     public boolean isLose() throws DirectionException {
         for(Box box: boxes){
             int loseCount=0;
+            int loseFlag=0;
 
             for(int i=0; i<4; i++){
-                if(!box.isWallMovable(this, i)){
+                if(!box.isWallMovable(this, i) && loseCount<2){
                     loseCount++;
+                    loseFlag+=i;
                 }
             }
 
-            if(loseCount>=2 && map[box.getX()][box.getY()]!=9)
+            if(loseCount>=2 && loseFlag%2==1 && map[box.getX()][box.getY()]!=9)
                 return true;
         }
 
