@@ -1,4 +1,4 @@
-package objects;
+package Objects;
 
 public abstract class MapObject {
     protected int x;

@@ -1,4 +1,4 @@
-package objects;
+package Objects;
 
 public class People extends MovableChecker implements Movable {
     public static final int W=0;

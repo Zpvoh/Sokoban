@@ -1,4 +1,4 @@
-package objects;
+package Objects;
 
 public interface Movable {
     public void move(int direction) throws DirectionException;

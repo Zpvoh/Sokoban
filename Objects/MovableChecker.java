@@ -1,6 +1,6 @@
-package objects;
+package Objects;
 
-import static objects.People.*;
+import static Objects.People.*;
 
 public class MovableChecker extends MapObject {
     MovableChecker(){

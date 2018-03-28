@@ -1,10 +1,5 @@
-package objects;
+package Objects;
 
-import objects.Box;
-import objects.People;
-import objects.Wall;
-
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;

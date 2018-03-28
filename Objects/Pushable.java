@@ -1,4 +1,4 @@
-package objects;
+package Objects;
 
 public interface Pushable {
 

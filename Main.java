@@ -1,7 +1,7 @@
-import objects.Box;
-import objects.DirectionException;
-import objects.Map;
-import objects.People;
+import Objects.Box;
+import Objects.DirectionException;
+import Objects.Map;
+import Objects.People;
 
 import java.util.Scanner;
 
